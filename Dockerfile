@@ -19,5 +19,10 @@ RUN \
   apt-get upgrade -y && apt-get clean
 # Mark subversion to stay at this version, and do security upgrades
 
-RUN mkdir /root/svnprojects
+RUN useradd -ms /bin/bash ubuntu
+USER ubuntu
+
 # Create a directory where you will mount your subversion projects
+RUN mkdir /home/ubuntu/svnproject
+WORKDIR /home/ubuntu/svnproject
+
