@@ -5,7 +5,6 @@ A docker image to get an svn 1.7 client
 Build the image, and open a container based on this image, and mount the directory of your SVN 1.7 project to a specific directory on the container.
 ```
 docker build -t docker-ubuntu-svn1.7 .
-docker run -it -v <your svn 1.7 project>:/root/svnprojects docker-ubuntu-svn1.7
 docker run -it -v <your svn 1.7 project>:/home/ubuntu/svnproject docker-ubuntu-svn1.7
 ```
 
